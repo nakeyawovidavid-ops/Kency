@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KencyBl@ck - Liens</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <meta name="theme-color" content="#7f3cff">
+  
+  <style>
+    :root{
+      --btn-radius:12px; --gap:14px; --maxw:420px;
+    }
+    *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{
+      margin:0;
+      display:flex;
+      min-height:100vh;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+      background: linear-gradient(-45deg, #7f3cff, #ff6a6a, #23d5ab, #23a6d5);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .panel{width:100%;max-width:var(--maxw);padding:36px;border-radius:20px;color:white;background:rgba(255,255,255,0.1);box-shadow:0 6px 18px rgba(0,0,0,0.18);}
+    .banner{width:calc(100% + 72px);margin:-36px 0 24px -36px;height:120px;background-color:rgba(0,0,0,0.1);border-radius:20px 20px 0 0;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;text-align:center;color:rgba(255,255,255,0.9);}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
+    .avatar{width:64px;height:64px;border-radius:12px;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;}
+    h1{margin:0;font-size:22px;}
+    p.lead{color:rgba(255,255,255,0.8);margin:10px 0 0;}
+    .welcome{text-align:center;margin:0 0 28px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .welcome h2{font-size:20px;margin:0 0 8px;}
+    .welcome p{font-size:14px;margin:0;color:rgba(255,255,255,0.8);}
+    .links{display:flex;flex-direction:column;gap:var(--gap);}
+    .btn{display:block;padding:12px 16px;border-radius:var(--btn-radius);text-decoration:none;font-weight:600;text-align:center;color:white;border:none;box-shadow:0 6px 18px rgba(0,0,0,0.18);background:rgba(255,255,255,0.06);text-shadow:0 1px 0 rgba(0,0,0,0.15);}
+    .btn:active{transform:translateY(1px);}
+    .btn.facebook{background:#1877f2;}
+    .btn.instagram{background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af);}
+    .btn.tiktok{background:#000;}
+    .btn.behance{background:#1769ff;}
+    .btn.threads{background:#000;}
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <div class="banner">
+      Bannière KencyBl@ck
+    </div>
+    <header>
+      <div class="avatar">KB</div>
+      <div>
+        <h1>KencyBl@ck</h1>
+        <p class="lead">Designer • Graphiste • Créateur</p>
+      </div>
+    </header>
+    <div class="welcome">
+      <h2>Bienvenue sur ma page !</h2>
+      <p>Retrouvez-moi sur tous mes réseaux.</p>
+    </div>
+    <div class="links">
+      <a class="btn instagram" href="https://www.instagram.com/kencyblack?igsh=MTdzZThzOWZzOW50Mw==" target="_blank">Instagram</a>
+      <a class="btn tiktok" href="https://www.tiktok.com/@kency_black?_t=ZM-8zvKjDll5n1&_r=1" target="_blank">TikTok</a>
+      <a class="btn behance" href="https://www.behance.net/davidnake" target="_blank">Behance</a>
+      <a class="btn threads" href="https://www.threads.com/@kencyblack" target="_blank">Threads</a>
+      <a class="btn facebook" href="https://www.facebook.com/david.nake.3?mibextid=ZbWKwL" target="_blank">Facebook</a>
+    </div>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker enregistré avec succès:', registration);
+          })
+          .catch(error => {
+            console.log('Échec de l\'enregistrement du Service Worker:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

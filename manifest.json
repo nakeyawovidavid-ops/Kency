@@ -1,0 +1,21 @@
+{
+  "name": "KencyBl@ck - Liens",
+  "short_name": "KencyBl@ck",
+  "description": "Retrouvez-moi sur tous mes réseaux sociaux. Portfolio et créations.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ff6a6a",
+  "theme_color": "#7f3cff",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
